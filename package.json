@@ -1,0 +1,19 @@
+{
+  "name": "augur",
+  "version": "1.0.0",
+  "description": "Interactive world map for flood and precipitation risk",
+  "main": "index.js",
+  "repository": "https://github.com/jahugg/augur.git",
+  "author": "jahugg <jan@huggenberg.ch>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
+  },
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  }
+}
