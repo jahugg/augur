@@ -2,7 +2,6 @@
   "name": "augur",
   "version": "1.0.0",
   "description": "Interactive world map for flood and precipitation risk",
-  "main": "index.js",
   "repository": "https://github.com/jahugg/augur.git",
   "author": "jahugg <jan@huggenberg.ch>",
   "license": "MIT",
