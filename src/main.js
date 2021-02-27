@@ -1,14 +1,28 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const map = L.map('map', {
-  center: [52.52, 13.4],
-  zoom: 4,
-});
+function initApp() {
 
-new L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png', {
-  attribution: `attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>`,
-  detectRetina: true,
-}).addTo(map);
+  // init map
+  const map = L.map('map', {
+    center: [52.52, 13.4],
+    zoom: 4,
+  });
 
-map.addEventListener('click', (e) => alert(`COORDINATES: ${e.latlng}`));
+  // configure tile layer
+  new L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png', {
+    attribution: `attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>`,
+    detectRetina: true,
+  }).addTo(map);
+
+  // register events
+  map.addEventListener('click', handleMapClick);
+}
+
+// click event
+function handleMapClick(event) {
+  alert(`COORDINATES: ${event.latlng}`);
+  // send, calculate and fetch data about floods here
+}
+
+initApp();
