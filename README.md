@@ -7,3 +7,8 @@ Interactive world map for flood and precipitation risk
 3. clone projects git directory
 4. run `yarn start` within the project directory
 5. open localhost:1234/ in your web browser
+
+# links, reference and maps
+- https://wiki.openstreetmap.org/wiki/Featured_tile_layers
+- https://carto.com/
+- https://www.maptiler.com/data/
