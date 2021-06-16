@@ -5,24 +5,21 @@ import "leaflet/dist/leaflet.css";
 import satData from "./data/ret100.json";
 
 function initApp() {
-
   // configure base tile layer
   let baseLayer = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png", {
     attribution: `attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>`,
     detectRetina: true,
   });
 
-  var cfg = {
+  let heatmap = new HeatmapLayer({
     maxOpacity: 0.8,
-    blur: 1,
-    scaleRadius: false,
+    radius: 2,
+    scaleRadius: true,
     useLocalExtrema: true,
     latField: "lat",
     lngField: "lon",
     valueField: "ret100",
-  };
-
-  let heatmap = new HeatmapLayer(cfg);
+  });
 
   var map = new L.Map("map", {
     center: new L.LatLng(-49.975, -74.825),
