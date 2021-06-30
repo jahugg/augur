@@ -10,11 +10,11 @@
     "build": "parcel build ./src/index.html"
   },
   "devDependencies": {
+    "@parcel/transformer-less": "2.0.0-beta.2",
     "parcel": "^2.0.0-beta.1"
   },
   "dependencies": {
-    "heatmap.js": "^2.0.5",
     "leaflet": "^1.7.1",
-    "leaflet-heatmap": "^1.0.0"
+    "leaflet-draw": "^1.0.4"
   }
 }
